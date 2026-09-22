@@ -46,6 +46,7 @@ setIsOpen(false);
 { name: lang === 'bn' ? 'চ্যাট' : 'Chat', icon: <MessageCircle className="w-5 h-5" />, href: '/dashboard/expertHome' },
  { name: lang === 'bn' ? 'প্রোফাইল' : 'ProfileSettings', icon: <Settings className='w-5 h-5' />, href: '/dashboard/profile' },
  { name: lang === 'bn' ? 'আবহাওয়া নোটিফিকেশন' : 'WeatherNotification', icon: <IoNotifications className='w-5 h-5' />, href: '/dashboard/notification' },
+{ name: lang === 'bn' ? 'রোগ শনাক্তকরণ' : 'Disease Detection', icon: <Bug className='w-5 h-5' />, href: '/dashboard/disease' }, 
 { name: lang === 'bn' ? 'মাটি বিশ্লেষণ' : 'Soil Analysis', icon: <TestTube2 className='w-5 h-5' />, href: '/dashboard/soil' },
     ],
   };

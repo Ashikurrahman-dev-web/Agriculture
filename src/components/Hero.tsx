@@ -4,8 +4,8 @@ import React, { useState, useEffect } from "react";
 
 const HeroSlider = () => {
   const images = [
-    "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=800",
-    "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=800",
+    "https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1635562985686-4f8bb9c0d3bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmljZXxlbnwwfHwwfHx8MA%3D%3D",
     "https://images.unsplash.com/photo-1568584711075-3d021a7c3ca3?w=800",
   ];
 
@@ -40,7 +40,7 @@ const HeroSlider = () => {
   
   {/* টেক্সট */}
   <span className="text-sm font-medium text-white/90">
-    {lang === 'bn' ? '৩০+ কৃষকের বিশ্বস্ত প্ল্যাটফর্ম' : "Trusted by 30+ farmers"}
+    {lang === 'bn' ? '১০+ কৃষকের বিশ্বস্ত প্ল্যাটফর্ম' : "Trusted by 10+ farmers"}
   </span>
 </div>
 

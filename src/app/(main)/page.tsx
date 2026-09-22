@@ -3,6 +3,7 @@
 import AboutSection from "@/components/About";
 import FeatureGrid from "@/components/Feature";
 import HeroSlider from "@/components/Hero";
+import ScrollButtons from "@/components/ScrollButtons";
 
 export default function HomePage() {
   
@@ -11,6 +12,7 @@ export default function HomePage() {
       <HeroSlider />
       <FeatureGrid />
       <AboutSection />
+      <ScrollButtons />
     </main>
   );
 }
