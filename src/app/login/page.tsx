@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { GrGoogle } from "react-icons/gr";
 
 const LoginPage = () => {
   const router = useRouter();
@@ -38,7 +39,17 @@ const LoginPage = () => {
       setLoading(false);
     }
   };  
-
+const handleGoogleSignIn = async () => {
+  try {
+    await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "/",
+    });
+  } catch (err) {
+    toast.error("❌ Google Login Failed!");
+    console.log(err);
+  }
+};
   return (
     <div className="min-h-screen py-12 px-4 flex items-center justify-center">
     <Card className="w-full max-w-md border border-[#2F5943] py-6 px-6 sm:px-8 shadow-2xl rounded-2xl bg-[#EAF0E8]">
@@ -88,6 +99,11 @@ const LoginPage = () => {
               {loading ? "Logging In..." : "LogIn"} 
             </Button>
           </div>
+           <p className="text-center text-2xl text-[#2F5943]">OR</p>
+<Button onClick={handleGoogleSignIn} className="w-full bg-[#2F5943]">
+        <GrGoogle />
+        Sign In With Google
+      </Button>
           <div className='flex justify-center items-center gap-1'>
          <p>Don't Have An Account?</p> 
          

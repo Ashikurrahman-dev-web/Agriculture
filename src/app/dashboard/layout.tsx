@@ -36,7 +36,7 @@ export default function DashboardLayout({
     session?.user?.id;
 
   const role =
-    session?.user?.role;
+    (session?.user as { role?: string } | undefined)?.role;
 
   useEffect(() => {
   if (isPending) return;
