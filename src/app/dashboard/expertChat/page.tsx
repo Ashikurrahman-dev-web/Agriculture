@@ -477,7 +477,6 @@ className="mb-6 flex items-center gap-2 text-sm font-semibold text-[#1F3D2B] tra
                         />
         <button
           onClick={sendMessage}
-          disabled={!socketConnected}
           className="bg-blue-600 text-white px-5 py-2 rounded-lg disabled:opacity-50 cursor-pointer">
           {lang === 'bn' ? 'পাঠান' : 'Send'}
         </button>
