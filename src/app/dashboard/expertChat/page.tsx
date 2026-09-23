@@ -33,7 +33,7 @@ type ChatMessage = {
   createdAt?: string;
 };
 
-export default function ExpertChat() {
+ function ExpertChatContent() {
   const searchParams = useSearchParams();
 
   const { data: session, isPending } = useSession();
@@ -330,7 +330,6 @@ const deleteMessage = () => {
   }
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
     <div className="max-w-2xl mx-auto p-6">
 <Link href={"/dashboard/expertHome"} 
 className="mb-6 flex items-center gap-2 text-sm font-semibold text-[#1F3D2B] transition hover:text-[#2F5943]">
@@ -513,6 +512,13 @@ className="mb-6 flex items-center gap-2 text-sm font-semibold text-[#1F3D2B] tra
     </div>
   </div>
 )}
-    </div></Suspense>
+    </div>
+  );
+}
+export default function ExpertChat() {
+  return (
+    <Suspense fallback={<div className="p-6">Loading...</div>}>
+      <ExpertChatContent />
+    </Suspense>
   );
 }
