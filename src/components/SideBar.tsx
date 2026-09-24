@@ -60,7 +60,7 @@ setIsOpen(false);
       <div className="lg:hidden fixed top-4 left-4 z-50">
         <button
           onClick={toggleSidebar}
-className="p-2 rounded-md bg-white shadow-md text-gray-700 hover:bg-gray-50 focus:outline-none"
+className="p-2 rounded-md bg-[#2F5943] text-[#E0A458] shadow-md hover:bg-gray-50 focus:outline-none"
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -69,7 +69,7 @@ className="p-2 rounded-md bg-white shadow-md text-gray-700 hover:bg-gray-50 focu
   
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity"
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={toggleSidebar}
         />
       )}

@@ -129,7 +129,7 @@ export default function AgriTechNavbar() {
           })}
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="flex items-center gap-4">
           <button
             type="button"
             onClick={toggleLanguage}
@@ -210,18 +210,10 @@ className="flex items-center gap-1.5 text-sm cursor-pointer font-medium bg-[#EAF
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
-          <button
-            type="button"
-            onClick={toggleLanguage}
-className="md:hidden flex items-center gap-1 text-xs font-medium cursor-pointer bg-[#EAF0E8] text-slate-700 border border-gray-200 px-2 py-1 rounded-md"
-          >
-            <Globe size={14} />
-            <span>{t.language}</span>
-          </button>
-
+  
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="p-2 text-[#2F5943] transition-colors"
+        className="p-2 rounded-md bg-[#2F5943] text-[#E0A458] shadow-md focus:outline-none"
             aria-label="Toggle Menu"
           >
             {menuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
@@ -253,30 +245,7 @@ className="md:hidden flex items-center gap-1 text-xs font-medium cursor-pointer 
             })}
 
             <div className="border-t border-slate-100 my-1 pt-2">
-              {session?.user ? (
-                <>
-                  <Link
-                    href={`/dashboard/${(session.user as typeof session.user & { role?: string }).role ?? "user"}`}
-                    onClick={() => setMenuOpen(false)}
-                    className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50"
-                  >
-                    <MdDashboard size={18} className="text-[#2F5943]" />
-                    {lang === "bn" ? "ড্যাশবোর্ড" : "Dashboard"}
-                  </Link>
-
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setMenuOpen(false);
-                      handleLogout();
-                    }}
-                    className="flex w-full items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-red-600 hover:bg-red-50"
-                  >
-                    <FaSignOutAlt size={16} />
-                    {lang === "bn" ? "লগআউট" : "Logout"}
-                  </button>
-                </>
-              ) : (
+              {!session?.user && (
                 <div className="flex flex-col gap-2 pt-1">
                   <Link
                     href="/login"
