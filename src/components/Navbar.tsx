@@ -191,7 +191,7 @@ className="flex items-center gap-1.5 text-sm cursor-pointer font-medium bg-[#EAF
               )}
             </div>
           ) : (
-            <div className="flex items-center gap-2">
+            <div className="hidden md:flex items-center gap-2">
               <Link
                 href="/login"
                 className="text-sm font-medium text-slate-600 hover:text-[#2F5943] px-3 py-1.5 transition-colors"
