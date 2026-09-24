@@ -84,7 +84,7 @@ fixed inset-y-0 left-0 z-40 w-1/2 min-w-[220px] lg:w-64 border-r border-[#2F5943
         `}
       >
         <div>
-  <div className="flex items-center gap-3 px-2 py-4 mb-6 border-b border-[#2F5943] sm:mt-4">
+  <div className="flex items-center gap-3 px-2 py-4 mb-3 border-b border-[#2F5943]">
            <div
            
             className="
