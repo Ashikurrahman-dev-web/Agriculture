@@ -78,7 +78,7 @@ className="p-2 rounded-md bg-[#2F5943] text-[#E0A458] shadow-md hover:bg-gray-50
       <aside
         className={`
 fixed inset-y-0 left-0 z-40 w-1/2 min-w-[220px] lg:w-64 border-r border-[#2F5943] text-black p-5 flex flex-col justify-between
-          transform transition-transform duration-300 ease-in-out shadow-2xl lg:shadow-none
+      bg-white transform transition-transform duration-300 ease-in-out shadow-2xl lg:shadow-none
           ${isOpen ? 'translate-x-0' : '-translate-x-full'}
           lg:translate-x-0 lg:static lg:h-screen
         `}
