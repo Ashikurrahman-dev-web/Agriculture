@@ -1,36 +1,333 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌱 Smart Agriculture Platform
 
-## Getting Started
+A modern **AI-powered Smart Agriculture Platform** designed to help farmers make better decisions through crop disease detection, soil analysis, weather information, crop planning, market prices, and real-time communication with agricultural experts.
 
-First, run the development server:
+🔗 **Live Website:** https://agriculture-delta-ochre.vercel.app/
+
+---
+
+## ✨ Features
+
+### 💬 Farmer–Expert Chat
+
+Real-time communication between farmers and agricultural experts using **Socket.IO**.
+
+* Real-time messaging
+* Farmer–expert conversation
+* Online/offline status
+* Persistent chat history
+* PostgreSQL-based message storage
+
+
+---
+
+### 🌿 AI Disease Detection
+
+Upload a crop/plant image and get an AI-powered disease analysis.
+
+* Crop disease identification
+* Disease name and scientific name
+* Confidence score
+* Visible symptoms
+* Organic treatment recommendations
+* Chemical treatment recommendations
+* Disease prevention suggestions
+* Bengali and English language support
+
+---
+
+### 🧪 AI Soil Analysis
+
+Analyze soil images using AI to get useful information about the soil.
+
+* Soil type detection
+* Estimated pH
+* Moisture level
+* Organic matter estimation
+* Suitable crops
+* Soil characteristics
+* Soil improvement recommendations
+* Bengali and English language support
+
+---
+
+### 📅 Crop Calendar
+
+Helps farmers plan agricultural activities according to the crop growth cycle.
+
+* Crop planning
+* Important agricultural activities
+* Seasonal planning
+* Crop growth schedule
+
+---
+
+### 🌦️ Weather
+
+Provides weather information to help farmers make better agricultural decisions.
+
+* Current weather information
+* Weather forecast
+* Temperature
+* Humidity
+* Wind information
+* Weather alerts
+* Agricultural advisory
+
+---
+
+### 📚 Disease Library
+
+A knowledge base containing information about common crop diseases.
+
+* Disease information
+* Symptoms
+* Causes
+* Treatment
+* Prevention
+* Agricultural knowledge resources
+
+---
+
+### 💰 Market Prices
+
+Provides agricultural market price information to help farmers understand current product prices.
+
+* Crop/product prices
+* Market-based price information
+* Agricultural product monitoring
+* Real-time data integration
+
+---
+
+## 🛠️ Technology Stack
+
+### Frontend
+
+* **Next.js**
+* **React**
+* **Tailwind CSS**
+* **HeroUI**
+* **Lucide React**
+* **Socket.IO Client**
+
+### Backend
+
+* **Node.js**
+* **Express.js**
+* **Socket.IO**
+* **PostgreSQL**
+
+### Authentication
+
+* **Better Auth**
+
+### AI
+
+* **Groq API**
+* **Qwen Vision Model**
+* AI-powered crop disease detection
+* AI-powered soil analysis
+
+### Cloud Services
+
+* **Cloudinary** – Image upload and storage
+* **Vercel** – Frontend deployment
+* PostgreSQL hosting for application data
+
+---
+
+## 🏗️ Main Modules
+
+```text
+Smart Agriculture Platform
+│
+├── 🔐 Authentication
+│   ├── Farmer
+│   └── Agricultural Expert
+│
+├── 💬 Farmer–Expert Chat
+│   └── Socket.IO
+│
+├── 🌿 AI Disease Detection
+│   └── Groq + Qwen Vision
+│
+├── 🧪 AI Soil Analysis
+│   └── Groq + Qwen Vision
+│
+├── 📅 Crop Calendar
+│
+├── 🌦️ Weather
+│
+├── 📚 Disease Library
+│
+└── 💰 Market Prices
+```
+
+---
+
+## 🔥 AI-Powered Agriculture
+
+The platform uses AI to help farmers analyze agricultural problems from images.
+
+### Disease Detection Flow
+
+```text
+Crop Image
+     ↓
+Cloudinary Upload
+     ↓
+AI Vision Model
+     ↓
+Disease Analysis
+     ↓
+Symptoms + Treatment
+     ↓
+Database Storage
+```
+
+### Soil Analysis Flow
+
+```text
+Soil Image
+     ↓
+Cloudinary Upload
+     ↓
+AI Vision Model
+     ↓
+Soil Analysis
+     ↓
+Soil Information + Recommendations
+     ↓
+Database Storage
+```
+
+---
+
+## 💬 Real-Time Chat Architecture
+
+The farmer–expert communication system uses **Socket.IO** for real-time communication.
+
+```text
+Farmer
+   │
+   │ Socket.IO
+   ▼
+Backend Server
+   │
+   ├── Conversation
+   │
+   └── Messages
+   │
+   ▼
+PostgreSQL
+   │
+   ▼
+Expert
+```
+
+Messages are stored in PostgreSQL so that previous conversations remain available even after refreshing the page.
+
+---
+
+## 🌍 Language Support
+
+The platform supports:
+
+* 🇧🇩 Bengali
+* 🇬🇧 English
+
+AI-generated agricultural information can be provided in the selected language.
+
+---
+
+## 🔐 Authentication & Roles
+
+The platform supports role-based users:
+
+### 👨‍🌾 Farmer
+
+Farmers can:
+
+* Analyze crop diseases
+* Analyze soil
+* Check weather
+* View crop calendar
+* View market prices
+* Browse disease information
+* Chat with agricultural experts
+
+### 👨‍🔬 Agricultural Expert
+
+Experts can:
+
+* Communicate with farmers
+* Receive farmer questions
+* Provide agricultural guidance
+* Manage conversations
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repository-url>
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+
+Create a `.env.local` file:
+
+```env
+NEXT_PUBLIC_SERVER_URL=your_backend_url
+NEXT_PUBLIC_SOCKET_URL=your_socket_server_url
+
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET=your_upload_preset
+
+NEXT_PUBLIC_APP_URL=your_frontend_url
+```
+
+Backend environment variables should include the required database, authentication, AI, and other server-side secrets.
+
+### 4. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 Project Goal
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The goal of this project is to build a digital agricultural platform that makes useful agricultural information and AI-powered tools more accessible to farmers.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The platform combines:
 
-## Deploy on Vercel
+**AI + Weather + Soil Analysis + Disease Detection + Market Information + Expert Consultation**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+into one integrated agriculture solution.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 👨‍💻 Developer
+
+**Ashikur Rahman**
+
+Built with ❤️ for Smart Agriculture 🌱
+
