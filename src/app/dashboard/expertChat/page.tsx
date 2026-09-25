@@ -140,8 +140,10 @@ useEffect(() => {
   }
 
   const newSocket = io(
-    process.env.NEXT_PUBLIC_SOCKET_URL
-  );
+    process.env.NEXT_PUBLIC_SOCKET_URL, {
+  transports: ["websocket", "polling"],
+  withCredentials: true,
+});
 
   socketRef.current =
     newSocket;
@@ -152,10 +154,7 @@ useEffect(() => {
 
       setSocketConnected(true);
 
-      console.log(
-        "Expert connected:",
-        newSocket.id
-      );
+      console.log("Expert connected:", newSocket.id);
 
       newSocket.emit(
         "join_room",
@@ -165,20 +164,14 @@ useEffect(() => {
           expertId,
           userId: expertId,
           role: "expert",
-        }
-      );
-
-    }
-  );
+        });
+    });
 
   newSocket.on(
     "user_status",
     (data) => {
 
-      console.log(
-        "User status:",
-        data
-      );
+      console.log("User status:", data);
 
       if (
         data.userId === farmerId

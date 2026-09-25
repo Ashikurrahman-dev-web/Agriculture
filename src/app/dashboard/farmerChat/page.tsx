@@ -129,7 +129,10 @@ useEffect(() => {
     return;
   }
 
-  const newSocket = io(process.env.NEXT_PUBLIC_SOCKET_URL);
+  const newSocket = io(process.env.NEXT_PUBLIC_SOCKET_URL, {
+  transports: ["websocket", "polling"],
+  withCredentials: true,
+});
 
   socketRef.current = newSocket;
 
@@ -160,19 +163,14 @@ newSocket.on(
   "user_status",
   (data) => {
 
-    console.log(
-      "User status:",
-      data
-    );
+    console.log("User status:", data);
     if (
       data.userId === expertId
     ) {
       setExpertOnline(
         data.status === "online"
       );
-    }
-  }
-);
+    }});
   newSocket.on(
     "receive_message",
     (data) => {

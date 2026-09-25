@@ -4,7 +4,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 
-const socket = io(process.env.NEXT_PUBLIC_SOCKET_URL);
+const socket = io(process.env.NEXT_PUBLIC_SOCKET_URL, {
+  transports: ["websocket", "polling"],
+  withCredentials: true,
+});
 
 type MarketPrice = {
   id: string | number;
