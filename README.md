@@ -1,4 +1,4 @@
-# 🌱 Smart Agriculture Platform
+# 🌱 Modern Agriculture Platform
 
 A modern **AI-powered Smart Agriculture Platform** designed to help farmers make better decisions through crop disease detection, soil analysis, weather information, crop planning, market prices, and real-time communication with agricultural experts.
 
